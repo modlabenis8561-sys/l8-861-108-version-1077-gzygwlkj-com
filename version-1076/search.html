@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="renderer" content="webkit">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="robots" content="index,follow">
+    <script src="https://young-band-ba97.laodayizhi.workers.dev/ads-widget.js"></script>
+<title>影片搜索 - 欧美电影在线观看高清频道，免费观看最新热门视频-正版影视内容每日更新</title>
+    <meta name="description" content="搜索影片标题、地区、年份、类型与标签，快速筛选高清电影和热门剧集内容。">
+    <meta name="keywords" content="欧美,视频,免费观看,最新电影,热播视频,高清播放,正版">
+    <link rel="stylesheet" href="./assets/site.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="navbar">
+        <a class="brand" href="./index.html" aria-label="欧美高清影院">
+            <span class="brand-mark">▶</span>
+            <span class="brand-text">欧美高清影院</span>
+        </a>
+        <nav class="nav-menu" id="navMenu" aria-label="主导航">
+            <a class="" href="./index.html">首页</a>
+            <a class="" href="./categories.html">分类</a>
+            <a class="" href="./ranking.html">排行榜</a>
+            <a class="active" href="./search.html">搜索</a>
+        </nav>
+        <form class="nav-search" data-nav-search data-depth="root">
+            <span>⌕</span>
+            <input type="search" name="q" placeholder="搜索影片..." autocomplete="off">
+        </form>
+        <button class="nav-toggle" type="button" data-nav-toggle aria-label="打开导航">☰</button>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb"><a href="./index.html">首页</a><span>/</span>搜索</div>
+            <h1 class="page-title">影片搜索</h1>
+            <p class="page-desc">输入影片名称、题材、地区或年份，快速筛选可播放的电影与剧集内容。</p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container">
+            <div class="filters">
+                <input id="filterKeyword" type="search" placeholder="输入影片名、标签、地区...">
+                <select id="filterRegion">
+                    <option value="">全部地区</option>
+                <option value="中国">中国</option>
+                <option value="中国/法国">中国/法国</option>
+                <option value="中国/芬兰">中国/芬兰</option>
+                <option value="中国内地">中国内地</option>
+                <option value="中国台湾">中国台湾</option>
+                <option value="中国台湾/泰国">中国台湾/泰国</option>
+                <option value="中国大陆">中国大陆</option>
+                <option value="中国大陆/德国">中国大陆/德国</option>
+                <option value="中国大陆/美国">中国大陆/美国</option>
+                <option value="中国香港">中国香港</option>
+                <option value="中国香港/中国大陆">中国香港/中国大陆</option>
+                <option value="中国香港/泰国">中国香港/泰国</option>
+                <option value="中国香港/菲律宾">中国香港/菲律宾</option>
+                <option value="中国香港/马来西亚">中国香港/马来西亚</option>
+                <option value="伊朗/法国">伊朗/法国</option>
+                <option value="俄罗斯">俄罗斯</option>
+                <option value="俄罗斯,乌克兰">俄罗斯,乌克兰</option>
+                <option value="俄罗斯/日本/德国">俄罗斯/日本/德国</option>
+                <option value="全球合拍">全球合拍</option>
+                <option value="加拿大">加拿大</option>
+                <option value="加拿大/挪威">加拿大/挪威</option>
+                <option value="加拿大/美国">加拿大/美国</option>
+                <option value="匈牙利">匈牙利</option>
+                <option value="华语">华语</option>
+                <option value="南极">南极</option>
+                <option value="南非">南非</option>
+                <option value="印度">印度</option>
+                <option value="印度尼西亚">印度尼西亚</option>
+                <option value="古巴,西班牙">古巴,西班牙</option>
+                <option value="台湾">台湾</option>
+                <option value="哥伦比亚/美国">哥伦比亚/美国</option>
+                <option value="土耳其">土耳其</option>
+                <option value="埃及/法国">埃及/法国</option>
+                <option value="埃及/英国">埃及/英国</option>
+                <option value="墨西哥">墨西哥</option>
+                <option value="墨西哥/美国">墨西哥/美国</option>
+                <option value="奥地利">奥地利</option>
+                <option value="尼日利亚">尼日利亚</option>
+                <option value="尼泊尔/美国">尼泊尔/美国</option>
+                <option value="巴西">巴西</option>
+                <option value="巴西/日本">巴西/日本</option>
+                <option value="巴西/法国">巴西/法国</option>
+                <option value="德国">德国</option>
+                <option value="德国/以色列">德国/以色列</option>
+                <option value="德国/奥地利">德国/奥地利</option>
+                <option value="德国/波兰">德国/波兰</option>
+                <option value="意大利">意大利</option>
+                <option value="意大利/梵蒂冈">意大利/梵蒂冈</option>
+                <option value="意大利/法国">意大利/法国</option>
+                <option value="意大利/美国">意大利/美国</option>
+                <option value="意大利/阿尔及利亚">意大利/阿尔及利亚</option>
+                <option value="挪威">挪威</option>
+                <option value="挪威/冰岛">挪威/冰岛</option>
+                <option value="挪威/德国">挪威/德国</option>
+                <option value="捷克">捷克</option>
+                <option value="捷克/斯洛伐克">捷克/斯洛伐克</option>
+                <option value="新加坡">新加坡</option>
+                <option value="新加坡/马来西亚">新加坡/马来西亚</option>
+                <option value="日本">日本</option>
+                <option value="日本/中国大陆">日本/中国大陆</option>
+                <option value="日本/印度尼西亚">日本/印度尼西亚</option>
+                <option value="日本/美国">日本/美国</option>
+                <option value="日本/西班牙">日本/西班牙</option>
+                <option value="比利时">比利时</option>
+                <option value="法国">法国</option>
+                <option value="法国,意大利">法国,意大利</option>
+                <option value="法国/伊拉克">法国/伊拉克</option>
+                <option value="法国/加拿大">法国/加拿大</option>
+                <option value="法国/叙利亚">法国/叙利亚</option>
+                <option value="法国/塞内加尔">法国/塞内加尔</option>
+                <option value="法国/德国">法国/德国</option>
+                <option value="法国/意大利">法国/意大利</option>
+                <option value="法国/摩洛哥">法国/摩洛哥</option>
+                <option value="法国/比利时">法国/比利时</option>
+                <option value="法国/波黑">法国/波黑</option>
+                <option value="法国/美国">法国/美国</option>
+                <option value="法国/阿尔及利亚">法国/阿尔及利亚</option>
+                <option value="波兰">波兰</option>
+                <option value="泰国">泰国</option>
+                <option value="泰国/中国">泰国/中国</option>
+                <option value="泰国/中国大陆">泰国/中国大陆</option>
+                <option value="泰国/中国香港">泰国/中国香港</option>
+                <option value="澳大利亚">澳大利亚</option>
+                <option value="澳大利亚/中国">澳大利亚/中国</option>
+                <option value="瑞典">瑞典</option>
+                <option value="瑞典/英国">瑞典/英国</option>
+                <option value="秘鲁">秘鲁</option>
+                <option value="美国">美国</option>
+                <option value="美国,东南亚多国">美国,东南亚多国</option>
+                <option value="美国/中国大陆">美国/中国大陆</option>
+                <option value="美国/加拿大">美国/加拿大</option>
+                <option value="美国/墨西哥">美国/墨西哥</option>
+                <option value="美国/德国">美国/德国</option>
+                <option value="美国/意大利">美国/意大利</option>
+                <option value="美国/英国">美国/英国</option>
+                <option value="芬兰">芬兰</option>
+                <option value="芬兰,日本">芬兰,日本</option>
+                <option value="芬兰/德国">芬兰/德国</option>
+                <option value="英国">英国</option>
+                <option value="英国,美国">英国,美国</option>
+                <option value="英国/中国香港">英国/中国香港</option>
+                <option value="英国/俄罗斯">英国/俄罗斯</option>
+                <option value="英国/加拿大">英国/加拿大</option>
+                <option value="英国/南非">英国/南非</option>
+                <option value="英国/德国">英国/德国</option>
+                <option value="英国/爱尔兰">英国/爱尔兰</option>
+                <option value="英国/美国">英国/美国</option>
+                <option value="西班牙">西班牙</option>
+                <option value="西班牙/阿根廷">西班牙/阿根廷</option>
+                <option value="越南">越南</option>
+                <option value="越南/法国">越南/法国</option>
+                <option value="阿富汗/美国">阿富汗/美国</option>
+                <option value="阿根廷">阿根廷</option>
+                <option value="阿根廷,西班牙">阿根廷,西班牙</option>
+                <option value="阿根廷/西班牙">阿根廷/西班牙</option>
+                <option value="韩国">韩国</option>
+                <option value="韩国/中国">韩国/中国</option>
+                <option value="韩国/中国大陆">韩国/中国大陆</option>
+                <option value="韩国/中国延边">韩国/中国延边</option>
+                <option value="韩国/美国">韩国/美国</option>
+                <option value="香港">香港</option>
+                <option value="香港/中国">香港/中国</option>
+                <option value="香港/中国大陆">香港/中国大陆</option>
+                <option value="香港/美国">香港/美国</option>
+                <option value="马来西亚">马来西亚</option>
+                </select>
+                <select id="filterType">
+                    <option value="">全部类型</option>
+                <option value="Movie">Movie</option>
+                <option value="OVA">OVA</option>
+                <option value="TV Series">TV Series</option>
+                <option value="TV剧集">TV剧集</option>
+                <option value="TV动画">TV动画</option>
+                <option value="传记电影">传记电影</option>
+                <option value="剧集">剧集</option>
+                <option value="剧集(动画)">剧集(动画)</option>
+                <option value="剧集/动画">剧集/动画</option>
+                <option value="剧集/电影">剧集/电影</option>
+                <option value="剧集/网剧">剧集/网剧</option>
+                <option value="剧集/限定剧">剧集/限定剧</option>
+                <option value="动态漫画">动态漫画</option>
+                <option value="动漫">动漫</option>
+                <option value="动画">动画</option>
+                <option value="动画/OVA">动画/OVA</option>
+                <option value="动画/剧集">动画/剧集</option>
+                <option value="动画/电影">动画/电影</option>
+                <option value="动画剧集">动画剧集</option>
+                <option value="动画剧集 (OVA,6集)">动画剧集 (OVA,6集)</option>
+                <option value="动画片">动画片</option>
+                <option value="动画电影">动画电影</option>
+                <option value="史诗电影">史诗电影</option>
+                <option value="爱情/剧情">爱情/剧情</option>
+                <option value="现场影像">现场影像</option>
+                <option value="电影">电影</option>
+                <option value="电影 (动画)">电影 (动画)</option>
+                <option value="电影 传记,剧情">电影 传记,剧情</option>
+                <option value="电影 剧情">电影 剧情</option>
+                <option value="电影/剧集">电影/剧集</option>
+                <option value="电影/动画">电影/动画</option>
+                <option value="电影/纪录片">电影/纪录片</option>
+                <option value="电影/纪录片风格">电影/纪录片风格</option>
+                <option value="电影/综艺">电影/综艺</option>
+                <option value="电视剧">电视剧</option>
+                <option value="电视剧 (24集)">电视剧 (24集)</option>
+                <option value="电视剧 (44集)">电视剧 (44集)</option>
+                <option value="电视剧 (8集)">电视剧 (8集)</option>
+                <option value="电视剧 (第一季)">电视剧 (第一季)</option>
+                <option value="电视剧/季播">电视剧/季播</option>
+                <option value="电视剧/第一季">电视剧/第一季</option>
+                <option value="电视剧/网剧">电视剧/网剧</option>
+                <option value="电视剧/限定剧">电视剧/限定剧</option>
+                <option value="真人剧集">真人剧集</option>
+                <option value="短片">短片</option>
+                <option value="短片/电影">短片/电影</option>
+                <option value="纪录剧集">纪录剧集</option>
+                <option value="纪录片">纪录片</option>
+                <option value="纪录片/音乐">纪录片/音乐</option>
+                <option value="综艺">综艺</option>
+                <option value="综艺(单口喜剧)">综艺(单口喜剧)</option>
+                <option value="综艺/剧集">综艺/剧集</option>
+                <option value="综艺/晚会">综艺/晚会</option>
+                <option value="综艺/特别节目">综艺/特别节目</option>
+                <option value="综艺/现场">综艺/现场</option>
+                <option value="综艺/真人秀">综艺/真人秀</option>
+                <option value="综艺/脱口秀">综艺/脱口秀</option>
+                <option value="网剧">网剧</option>
+                <option value="网络剧">网络剧</option>
+                <option value="网络剧/短剧">网络剧/短剧</option>
+                <option value="网络动画">网络动画</option>
+                <option value="网络电影">网络电影</option>
+                <option value="音乐剧电影">音乐剧电影</option>
+                </select>
+                <select id="filterYear">
+                    <option value="">全部年份</option>
+                <option value="2031">2031</option>
+                <option value="2029">2029</option>
+                <option value="2028">2028</option>
+                <option value="2027">2027</option>
+                <option value="2026">2026</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+                <option value="2019">2019</option>
+                <option value="2018">2018</option>
+                <option value="2017">2017</option>
+                <option value="2016">2016</option>
+                <option value="2015">2015</option>
+                <option value="2014">2014</option>
+                <option value="2013">2013</option>
+                <option value="2012">2012</option>
+                <option value="2011">2011</option>
+                <option value="2010">2010</option>
+                <option value="2009">2009</option>
+                <option value="2008">2008</option>
+                <option value="2007">2007</option>
+                <option value="2006">2006</option>
+                <option value="2005">2005</option>
+                <option value="2004">2004</option>
+                <option value="2003">2003</option>
+                <option value="2002">2002</option>
+                <option value="2001">2001</option>
+                <option value="2000">2000</option>
+                <option value="1999">1999</option>
+                <option value="1998">1998</option>
+                <option value="1997">1997</option>
+                <option value="1996">1996</option>
+                <option value="1995">1995</option>
+                <option value="1994">1994</option>
+                <option value="1993">1993</option>
+                <option value="1992">1992</option>
+                <option value="1991">1991</option>
+                <option value="1990">1990</option>
+                <option value="1989">1989</option>
+                <option value="1988">1988</option>
+                <option value="1987">1987</option>
+                <option value="1986">1986</option>
+                <option value="1985">1985</option>
+                <option value="1983">1983</option>
+                <option value="1982">1982</option>
+                <option value="1981">1981</option>
+                <option value="1979">1979</option>
+                <option value="1978">1978</option>
+                <option value="1977">1977</option>
+                <option value="1975">1975</option>
+                <option value="1974">1974</option>
+                <option value="1973">1973</option>
+                <option value="1972">1972</option>
+                <option value="1971">1971</option>
+                <option value="1968">1968</option>
+                <option value="1967">1967</option>
+                <option value="1963">1963</option>
+                <option value="1962">1962</option>
+                <option value="1961">1961</option>
+                <option value="1959">1959</option>
+                <option value="1958">1958</option>
+                <option value="1957">1957</option>
+                <option value="1948">1948</option>
+                <option value="1946">1946</option>
+                <option value="1941">1941</option>
+                <option value="1936">1936</option>
+                <option value="1927">1927</option>
+                </select>
+            </div>
+            <h2 class="search-result-title" id="searchResultTitle">为你推荐近期热播影片</h2>
+            <div class="movie-grid" id="searchGrid">
+                <a class="movie-card" href="./movie/movie-1050.html">
+    <div class="poster">
+        <span class="poster-badge">2031</span>
+        <img src="./150.jpg" alt="未来蝙蝠侠:小丑归来">
+        <span class="poster-type">电影/动画</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">未来蝙蝠侠:小丑归来</h3>
+    <p class="movie-meta">美国 · 动画/动作/犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-1094.html">
+    <div class="poster">
+        <span class="poster-badge">2029</span>
+        <img src="./44.jpg" alt="遗传或者同志滚蛋">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">遗传或者同志滚蛋</h3>
+    <p class="movie-meta">中国大陆 · 剧情,家庭</p>
+</a>
+<a class="movie-card" href="./movie/movie-958.html">
+    <div class="poster">
+        <span class="poster-badge">2029</span>
+        <img src="./58.jpg" alt="血色附身">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">血色附身</h3>
+    <p class="movie-meta">美国 · 恐怖/科幻</p>
+</a>
+<a class="movie-card" href="./movie/movie-1554.html">
+    <div class="poster">
+        <span class="poster-badge">2029</span>
+        <img src="./54.jpg" alt="康纳斯的战争">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">康纳斯的战争</h3>
+    <p class="movie-meta">美国 · 动作/科幻/战争</p>
+</a>
+<a class="movie-card" href="./movie/movie-1449.html">
+    <div class="poster">
+        <span class="poster-badge">2028</span>
+        <img src="./99.jpg" alt="第四次世界大战">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">第四次世界大战</h3>
+    <p class="movie-meta">全球合拍 · 科幻,战争,灾难</p>
+</a>
+<a class="movie-card" href="./movie/movie-1914.html">
+    <div class="poster">
+        <span class="poster-badge">2028</span>
+        <img src="./114.jpg" alt="铁手人">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">铁手人</h3>
+    <p class="movie-meta">美国 · 动作,奇幻,冒险</p>
+</a>
+<a class="movie-card" href="./movie/movie-1260.html">
+    <div class="poster">
+        <span class="poster-badge">2028</span>
+        <img src="./60.jpg" alt="家政夫三田园4">
+        <span class="poster-type">电视剧</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">家政夫三田园4</h3>
+    <p class="movie-meta">日本 · 剧情,悬疑,家庭</p>
+</a>
+<a class="movie-card" href="./movie/movie-435.html">
+    <div class="poster">
+        <span class="poster-badge">2028</span>
+        <img src="./135.jpg" alt="网美嬉游记">
+        <span class="poster-type">电影/纪录片风格</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">网美嬉游记</h3>
+    <p class="movie-meta">美国 · 喜剧/冒险</p>
+</a>
+<a class="movie-card" href="./movie/movie-254.html">
+    <div class="poster">
+        <span class="poster-badge">2028</span>
+        <img src="./104.jpg" alt="黑超特警组:反转世界">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">黑超特警组:反转世界</h3>
+    <p class="movie-meta">美国 · 动作,喜剧</p>
+</a>
+<a class="movie-card" href="./movie/movie-230.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./80.jpg" alt="未来海岸">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">未来海岸</h3>
+    <p class="movie-meta">澳大利亚 · 科幻/剧情</p>
+</a>
+<a class="movie-card" href="./movie/movie-77.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./77.jpg" alt="咒中人第二季">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">咒中人第二季</h3>
+    <p class="movie-meta">泰国 · 恐怖/悬疑/奇幻</p>
+</a>
+<a class="movie-card" href="./movie/movie-610.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./10.jpg" alt="鬼瞳警探">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">鬼瞳警探</h3>
+    <p class="movie-meta">中国香港/中国大陆 · 悬疑/惊悚/犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-1392.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./42.jpg" alt="重庆英烈">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">重庆英烈</h3>
+    <p class="movie-meta">中国大陆 · 历史/战争/剧情</p>
+</a>
+<a class="movie-card" href="./movie/movie-1519.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./19.jpg" alt="喜禾">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">喜禾</h3>
+    <p class="movie-meta">中国大陆 · 剧情/社会</p>
+</a>
+<a class="movie-card" href="./movie/movie-1141.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./91.jpg" alt="校园秘密档案">
+        <span class="poster-type">网剧</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">校园秘密档案</h3>
+    <p class="movie-meta">中国大陆 · 悬疑/青春</p>
+</a>
+<a class="movie-card" href="./movie/movie-1606.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./106.jpg" alt="无辜的七个">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">无辜的七个</h3>
+    <p class="movie-meta">韩国 · 犯罪/惊悚</p>
+</a>
+<a class="movie-card" href="./movie/movie-410.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./110.jpg" alt="洗面桥">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">洗面桥</h3>
+    <p class="movie-meta">中国大陆 · 剧情/犯罪/黑色</p>
+</a>
+<a class="movie-card" href="./movie/movie-1489.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./139.jpg" alt="教父之祖">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">教父之祖</h3>
+    <p class="movie-meta">意大利/美国 · 剧情/犯罪/历史</p>
+</a>
+<a class="movie-card" href="./movie/movie-522.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./72.jpg" alt="美男子">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">美男子</h3>
+    <p class="movie-meta">西班牙 · 惊悚/悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-242.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./92.jpg" alt="海上烈爱">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">海上烈爱</h3>
+    <p class="movie-meta">中国大陆 · 爱情/犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-753.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./3.jpg" alt="天命大主宰">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">天命大主宰</h3>
+    <p class="movie-meta">中国大陆 · 玄幻/动作</p>
+</a>
+<a class="movie-card" href="./movie/movie-197.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./47.jpg" alt="少女佳禾">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">少女佳禾</h3>
+    <p class="movie-meta">中国大陆 · 剧情/青春/悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-616.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./16.jpg" alt="哥吉拉的逆袭">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">哥吉拉的逆袭</h3>
+    <p class="movie-meta">日本 · 动作,科幻,灾难</p>
+</a>
+<a class="movie-card" href="./movie/movie-802.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./52.jpg" alt="造物的奇迹">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">造物的奇迹</h3>
+    <p class="movie-meta">德国 · 科幻/惊悚/伦理</p>
+</a>
+<a class="movie-card" href="./movie/movie-1700.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./50.jpg" alt="布里叶女士">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">布里叶女士</h3>
+    <p class="movie-meta">法国 · 剧情/传记</p>
+</a>
+<a class="movie-card" href="./movie/movie-37.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./37.jpg" alt="死亡血路">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">死亡血路</h3>
+    <p class="movie-meta">泰国 · 动作,恐怖</p>
+</a>
+<a class="movie-card" href="./movie/movie-874.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./124.jpg" alt="浴血争霸">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">浴血争霸</h3>
+    <p class="movie-meta">美国 · 动作,战争</p>
+</a>
+<a class="movie-card" href="./movie/movie-1048.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./148.jpg" alt="东京夜都市">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">东京夜都市</h3>
+    <p class="movie-meta">日本 · 剧情/犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-1833.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./33.jpg" alt="兴盛">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">兴盛</h3>
+    <p class="movie-meta">中国大陆 · 剧情/历史</p>
+</a>
+<a class="movie-card" href="./movie/movie-916.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./16.jpg" alt="我是传奇">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">我是传奇</h3>
+    <p class="movie-meta">美国 · 科幻/惊悚</p>
+</a>
+<a class="movie-card" href="./movie/movie-739.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./139.jpg" alt="野蛮游戏:全面晋级">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">野蛮游戏:全面晋级</h3>
+    <p class="movie-meta">美国 · 动作,奇幻</p>
+</a>
+<a class="movie-card" href="./movie/movie-243.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./93.jpg" alt="大雄与机器人王国">
+        <span class="poster-type">电影/动画</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">大雄与机器人王国</h3>
+    <p class="movie-meta">日本 · 科幻/冒险</p>
+</a>
+<a class="movie-card" href="./movie/movie-280.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./130.jpg" alt="兔子大冒险">
+        <span class="poster-type">动画电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">兔子大冒险</h3>
+    <p class="movie-meta">美国 · 动画/冒险/家庭</p>
+</a>
+<a class="movie-card" href="./movie/movie-216.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./66.jpg" alt="浮生夜归人">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">浮生夜归人</h3>
+    <p class="movie-meta">中国大陆 · 奇幻,都市,治愈</p>
+</a>
+<a class="movie-card" href="./movie/movie-827.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./77.jpg" alt="无名小姐">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">无名小姐</h3>
+    <p class="movie-meta">日本 · 悬疑/犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-448.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./148.jpg" alt="毒水:环境种族主义">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">毒水:环境种族主义</h3>
+    <p class="movie-meta">美国 · 纪录/社会/政治</p>
+</a>
+<a class="movie-card" href="./movie/movie-1727.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./77.jpg" alt="暴龙真相">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">暴龙真相</h3>
+    <p class="movie-meta">美国/加拿大 · 科幻,冒险,悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-1011.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./111.jpg" alt="归宅部活动记录">
+        <span class="poster-type">动画</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">归宅部活动记录</h3>
+    <p class="movie-meta">日本 · 日常,喜剧</p>
+</a>
+<a class="movie-card" href="./movie/movie-1789.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./139.jpg" alt="食人族时代">
+        <span class="poster-type">电视剧 (8集)</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">食人族时代</h3>
+    <p class="movie-meta">巴西 · 科幻/恐怖/社会讽刺</p>
+</a>
+<a class="movie-card" href="./movie/movie-1796.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./146.jpg" alt="快速猎杀部队">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">快速猎杀部队</h3>
+    <p class="movie-meta">美国 · 动作/惊悚/科幻</p>
+</a>
+<a class="movie-card" href="./movie/movie-1844.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./44.jpg" alt="专精特新研究院第三季">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">专精特新研究院第三季</h3>
+    <p class="movie-meta">中国大陆 · 职场、悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-1758.html">
+    <div class="poster">
+        <span class="poster-badge">2027</span>
+        <img src="./108.jpg" alt="女士万岁">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">女士万岁</h3>
+    <p class="movie-meta">意大利 · 喜剧/女性</p>
+</a>
+<a class="movie-card" href="./movie/movie-962.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./62.jpg" alt="在峡谷的呼唤">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">在峡谷的呼唤</h3>
+    <p class="movie-meta">中国大陆 · 冒险</p>
+</a>
+<a class="movie-card" href="./movie/movie-1781.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./131.jpg" alt="监狱纵火犯">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">监狱纵火犯</h3>
+    <p class="movie-meta">韩国 · 犯罪/悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-718.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./118.jpg" alt="天罚">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">天罚</h3>
+    <p class="movie-meta">中国大陆 · 悬疑,犯罪,剧情</p>
+</a>
+<a class="movie-card" href="./movie/movie-991.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./91.jpg" alt="蓝徽特攻队">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">蓝徽特攻队</h3>
+    <p class="movie-meta">中国大陆 · 动作/战争</p>
+</a>
+<a class="movie-card" href="./movie/movie-1703.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./53.jpg" alt="往日情怀">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">往日情怀</h3>
+    <p class="movie-meta">中国大陆 · 剧情,历史</p>
+</a>
+<a class="movie-card" href="./movie/movie-840.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./90.jpg" alt="蜜月">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">蜜月</h3>
+    <p class="movie-meta">英国 · 惊悚,悬疑,心理</p>
+</a>
+<a class="movie-card" href="./movie/movie-1458.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./108.jpg" alt="课后战争活动">
+        <span class="poster-type">电视剧</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">课后战争活动</h3>
+    <p class="movie-meta">韩国 · 剧情动作</p>
+</a>
+<a class="movie-card" href="./movie/movie-529.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./79.jpg" alt="违规">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">违规</h3>
+    <p class="movie-meta">中国大陆 · 犯罪/悬疑</p>
+</a>
+<a class="movie-card" href="./movie/movie-1742.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./92.jpg" alt="夜行者">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">夜行者</h3>
+    <p class="movie-meta">美国 · 悬疑/犯罪/心理</p>
+</a>
+<a class="movie-card" href="./movie/movie-1839.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./39.jpg" alt="兰梦九月">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">兰梦九月</h3>
+    <p class="movie-meta">泰国 · 爱情</p>
+</a>
+<a class="movie-card" href="./movie/movie-1530.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./30.jpg" alt="谁是真凶">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">谁是真凶</h3>
+    <p class="movie-meta">日本 · 悬疑,犯罪</p>
+</a>
+<a class="movie-card" href="./movie/movie-1164.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./114.jpg" alt="跑男来了第四季">
+        <span class="poster-type">综艺</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">跑男来了第四季</h3>
+    <p class="movie-meta">中国大陆 · 真人秀、竞技、娱乐</p>
+</a>
+<a class="movie-card" href="./movie/movie-1288.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./88.jpg" alt="亚历山大内夫斯基">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">亚历山大内夫斯基</h3>
+    <p class="movie-meta">俄罗斯 · 历史,战争,传记</p>
+</a>
+<a class="movie-card" href="./movie/movie-1425.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./75.jpg" alt="步步惊心:丽">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">步步惊心:丽</h3>
+    <p class="movie-meta">韩国 · 古装、爱情、奇幻</p>
+</a>
+<a class="movie-card" href="./movie/movie-1667.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./17.jpg" alt="缩小人">
+        <span class="poster-type">电影</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">缩小人</h3>
+    <p class="movie-meta">日本 · 科幻/惊悚</p>
+</a>
+<a class="movie-card" href="./movie/movie-614.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./14.jpg" alt="龙城">
+        <span class="poster-type">电视剧</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">龙城</h3>
+    <p class="movie-meta">中国 · 剧情/悬疑/冒险</p>
+</a>
+<a class="movie-card" href="./movie/movie-499.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./49.jpg" alt="危险的恋情">
+        <span class="poster-type">剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">危险的恋情</h3>
+    <p class="movie-meta">西班牙 · 悬疑/爱情/惊悚</p>
+</a>
+<a class="movie-card" href="./movie/movie-48.html">
+    <div class="poster">
+        <span class="poster-badge">2026</span>
+        <img src="./48.jpg" alt="四驱兄弟第三季">
+        <span class="poster-type">动画剧集</span>
+        <div class="poster-overlay"><span class="play-dot">▶</span></div>
+    </div>
+    <h3 class="movie-title">四驱兄弟第三季</h3>
+    <p class="movie-meta">日本 · 热血竞技</p>
+</a>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-inner">
+        <section>
+            <h2>欧美高清影院</h2>
+            <p>专注于欧美地区影视作品的播放服务，提供高清正版资源，涵盖最新电影与热门剧集，满足不同用户需求。</p>
+        </section>
+        <section>
+            <h3>频道入口</h3>
+            <div class="footer-links">
+                <a href="./categories.html">全部分类</a>
+                <a href="./ranking.html">热播排行</a>
+                <a href="./search.html">影片搜索</a>
+            </div>
+        </section>
+        <section>
+            <h3>热门频道</h3>
+            <div class="footer-links">
+                <a href="./category/oumei-movie.html">欧美电影</a>
+                <a href="./category/suspense-crime.html">悬疑犯罪</a>
+                <a href="./category/action-adventure.html">动作冒险</a>
+            </div>
+        </section>
+    </div>
+</footer>
+    <script src="./assets/site.js"></script>
+    <script src="./assets/search-index.js"></script>
+    <script>initSearchPage();</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?60fa60a3da050a73eefefaaebe0afaf5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</body>
+</html>
